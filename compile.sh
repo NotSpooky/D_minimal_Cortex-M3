@@ -1,0 +1,1 @@
+ldc2 -march=thumb -mcpu=cortex-m3 -c -g start.d && arm-none-eabi-ld -T stm32f103.ld --gc-sections start.o -o start.elf && openocd -c "telnet_port 5449" -f interface/stlink-v2.cfg -f target/stm32f1x.cfg

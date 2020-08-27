@@ -19,7 +19,7 @@ SECTIONS
   .text :       
   {
     LONG(_stackStart);              /* Initial stack pointer */
-    KEEP(start.o(*.ResetHandler))   /* Interrupt vector table (Entry point) */
+    KEEP(start.o(*.resetHandler))   /* Interrupt vector table (Entry point) */
  
     /* the code */
     *(.text)      
